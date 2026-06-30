@@ -1,335 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anay Srivastav — AI/ML Engineer</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anay Srivastav — AI/ML Engineer</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+.project-footer-links{display:flex;gap:14px;margin-top:12px;}
+.project-footer-link{font-size:0.85rem;font-weight:500;color:var(--indigo,#6C63FF);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;}
+.project-footer-link:hover{color:var(--cyan,#00F5FF);}
+</style>
 </head>
 <body>
+<!-- ── CANVAS for particle background ── -->
+<canvas id="particle-canvas"></canvas>
 
-  <!-- ── CANVAS for particle background ── -->
-  <canvas id="particle-canvas"></canvas>
+<!-- ── NAV ── -->
+<nav id="navbar">
+<div class="nav-inner">
+<span class="nav-logo">anay<span class="accent">.</span>dev</span>
+<ul class="nav-links">
+<li><a href="#about">about</a></li>
+<li><a href="#skills">skills</a></li>
+<li><a href="#projects">projects</a></li>
+<li><a href="#certifications">certs</a></li>
+<li><a href="#contact">contact</a></li>
+</ul>
+<a href="resume.pdf" class="nav-cta" download>résumé ↓</a>
+<button class="hamburger" id="hamburger" aria-label="Menu">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
 
-  <!-- ── NAV ── -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <span class="nav-logo">anay<span class="accent">.</span>dev</span>
-      <ul class="nav-links">
-        <li><a href="#about">about</a></li>
-        <li><a href="#skills">skills</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#certifications">certs</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
-      <a href="resume.pdf" class="nav-cta" download>résumé ↓</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+<!-- ── HERO ── -->
+<section id="hero">
+<div class="hero-inner">
+<div class="hero-tag mono">&lt;AI/ML Engineer /&gt;</div>
+<h1 class="hero-name">Anay<br /><span class="name-outline">Srivastav</span></h1>
+<div class="hero-terminal">
+<div class="terminal-bar">
+<span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+<span class="terminal-title mono">anay@portfolio ~ $</span>
+</div>
+<div class="terminal-body">
+<p class="mono" id="typewriter-line"></p>
+<span class="cursor">▌</span>
+</div>
+</div>
+<div class="hero-stats">
+<div class="stat"><span class="stat-num">9.03</span><span class="stat-label">CGPA</span></div>
+<div class="stat-divider"></div>
+<div class="stat"><span class="stat-num">#1</span><span class="stat-label">AI&ML Rank</span></div>
+<div class="stat-divider"></div>
+<div class="stat"><span class="stat-num">99%</span><span class="stat-label">Java NPTEL</span></div>
+</div>
+<div class="hero-cta-row">
+<a href="#projects" class="btn-primary">View Projects</a>
+<a href="#contact" class="btn-ghost">Get in Touch</a>
+</div>
+</div>
+<div class="scroll-hint">
+<span class="mono">scroll</span>
+<div class="scroll-line"></div>
+</div>
+</section>
 
-  <!-- ── HERO ── -->
-  <section id="hero">
-    <div class="hero-inner">
-      <div class="hero-tag mono">&lt;AI/ML Engineer /&gt;</div>
-      <h1 class="hero-name">Anay<br /><span class="name-outline">Srivastav</span></h1>
-      <div class="hero-terminal">
-        <div class="terminal-bar">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="terminal-title mono">anay@portfolio ~ $</span>
-        </div>
-        <div class="terminal-body">
-          <p class="mono" id="typewriter-line"></p>
-          <span class="cursor">▌</span>
-        </div>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-num">9.13</span><span class="stat-label">CGPA</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">#1</span><span class="stat-label">AI&ML Rank</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">99%</span><span class="stat-label">Java NPTEL</span></div>
-      </div>
-      <div class="hero-cta-row">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="#contact" class="btn-ghost">Get in Touch</a>
-      </div>
-    </div>
-    <div class="scroll-hint">
-      <span class="mono">scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
+<!-- ── ABOUT ── -->
+<section id="about">
+<div class="container">
+<div class="section-eyebrow mono">01 — about</div>
+<div class="about-grid">
+<div class="about-text">
+<h2 class="section-title">Building<br /><span class="accent-text">intelligent</span><br />things.</h2>
+</div>
+<div class="about-bio">
+<p>
+I'm a first-year B.Tech student in Computer Science (AI & ML) at Dronacharya Group of Institutions, Greater Noida — currently ranked <strong>1st in my branch</strong>. My work sits at the intersection of machine learning, data science, and full-stack development.
+</p>
+<p>
+I don't just study AI — I build with it. From Flask-powered expense trackers to responsive waste management platforms, I translate complexity into clean, working software.
+</p>
+<p>
+Outside of tech, I was recognised by HFCL for voluntarily teaching students during COVID-19, and I'm a state-level winner in a national competition. I bring that same energy — leadership, empathy, follow-through — to every team I join.
+</p>
+<div class="about-links">
+<a href="https://github.com/anay1403" target="_blank" class="about-link">GitHub ↗</a>
+<a href="https://linkedin.com/in/anay-srivastav" target="_blank" class="about-link">LinkedIn ↗</a>
+<a href="https://leetcode.com/u/Anay_141006" target="_blank" class="about-link">LeetCode ↗</a>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-  <!-- ── ABOUT ── -->
-  <section id="about">
-    <div class="container">
-      <div class="section-eyebrow mono">01 — about</div>
-      <div class="about-grid">
-        <div class="about-text">
-          <h2 class="section-title">Building<br /><span class="accent-text">intelligent</span><br />things.</h2>
-        </div>
-        <div class="about-bio">
-          <p>
-            I'm a first-year B.Tech student in Computer Science (AI & ML) at Dronacharya Group of Institutions, Greater Noida — currently ranked <strong>1st in my branch</strong>. My work sits at the intersection of machine learning, data science, and full-stack development.
-          </p>
-          <p>
-            I don't just study AI — I build with it. From Flask-powered expense trackers to responsive waste management platforms, I translate complexity into clean, working software.
-          </p>
-          <p>
-            Outside of tech, I was recognised by HFCL for voluntarily teaching students during COVID-19, and I'm a state-level winner in a national competition. I bring that same energy — leadership, empathy, follow-through — to every team I join.
-          </p>
-          <div class="about-links">
-            <a href="https://github.com/anay1403" target="_blank" class="about-link">GitHub ↗</a>
-            <a href="https://linkedin.com/in/anay-srivastav" target="_blank" class="about-link">LinkedIn ↗</a>
-            <a href="https://leetcode.com/u/Anay_141006" target="_blank" class="about-link">LeetCode ↗</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- ── SKILLS ── -->
+<section id="skills">
+<div class="container">
+<div class="section-eyebrow mono">02 — skills</div>
+<h2 class="section-title">Tech Stack</h2>
+<div class="skills-grid">
+<div class="skill-card">
+<div class="skill-card-icon">⌨</div>
+<h3>Languages</h3>
+<div class="pill-group">
+<span class="pill">Python</span>
+<span class="pill">Java</span>
+<span class="pill">C</span>
+<span class="pill">HTML</span>
+<span class="pill">CSS</span>
+<span class="pill">PHP</span>
+</div>
+</div>
+<div class="skill-card">
+<div class="skill-card-icon">🧠</div>
+<h3>AI / Data</h3>
+<div class="pill-group">
+<span class="pill accent-pill">Machine Learning</span>
+<span class="pill accent-pill">Data Science</span>
+<span class="pill">Pandas</span>
+<span class="pill">NumPy</span>
+<span class="pill">Matplotlib</span>
+</div>
+</div>
+<div class="skill-card">
+<div class="skill-card-icon">🌐</div>
+<h3>Web & Frameworks</h3>
+<div class="pill-group">
+<span class="pill">Flask</span>
+<span class="pill">Bootstrap</span>
+<span class="pill">SQLite</span>
+<span class="pill">MySQL</span>
+</div>
+</div>
+<div class="skill-card">
+<div class="skill-card-icon">🤝</div>
+<h3>Soft Skills</h3>
+<div class="pill-group">
+<span class="pill soft-pill">Leadership</span>
+<span class="pill soft-pill">Mentorship</span>
+<span class="pill soft-pill">Communication</span>
+<span class="pill soft-pill">Problem Solving</span>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-  <!-- ── SKILLS ── -->
-  <section id="skills">
-    <div class="container">
-      <div class="section-eyebrow mono">02 — skills</div>
-      <h2 class="section-title">Tech Stack</h2>
-      <div class="skills-grid">
+<!-- ── PROJECTS ── -->
+<section id="projects">
+<div class="container">
+<div class="section-eyebrow mono">03 — projects</div>
+<h2 class="section-title">Things I've Built</h2>
+<div class="projects-grid">
 
-        <div class="skill-card">
-          <div class="skill-card-icon">⌨</div>
-          <h3>Languages</h3>
-          <div class="pill-group">
-            <span class="pill">Python</span>
-            <span class="pill">Java</span>
-            <span class="pill">C</span>
-            <span class="pill">HTML</span>
-            <span class="pill">CSS</span>
-            <span class="pill">PHP</span>
-          </div>
-        </div>
+<div class="project-card">
+<div class="project-header">
+<span class="project-num mono">01</span>
+<div class="project-links">
+<a href="https://github.com/anay1403/Smart-Expense-Tracker" target="_blank" rel="noopener noreferrer" title="View GitHub Repo">⤻</a>
+</div>
+</div>
+<a href="https://smart-expense-tracker-fetv.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">
+<h3 class="project-title">Smart Expense Tracker</h3>
+</a>
+<p class="project-desc">
+A full-stack Flask web application to track, categorize, and analyze personal expenses — complete with interactive data visualizations, PDF report generation, and CSV export for monthly summaries.
+</p>
+<div class="project-stack">
+<span class="stack-tag">Python</span>
+<span class="stack-tag">Flask</span>
+<span class="stack-tag">SQLite</span>
+<span class="stack-tag">Matplotlib</span>
+<span class="stack-tag">HTML/CSS</span>
+</div>
+<div class="project-footer-links">
+<a href="https://smart-expense-tracker-fetv.onrender.com" target="_blank" rel="noopener noreferrer" class="project-footer-link">Live Demo ↗</a>
+<a href="https://github.com/anay1403/Smart-Expense-Tracker" target="_blank" rel="noopener noreferrer" class="project-footer-link">View Repo ↗</a>
+</div>
+</div>
 
-        <div class="skill-card">
-          <div class="skill-card-icon">🧠</div>
-          <h3>AI / Data</h3>
-          <div class="pill-group">
-            <span class="pill accent-pill">Machine Learning</span>
-            <span class="pill accent-pill">Data Science</span>
-            <span class="pill">Pandas</span>
-            <span class="pill">NumPy</span>
-            <span class="pill">Matplotlib</span>
-          </div>
-        </div>
+<div class="project-card">
+<div class="project-header">
+<span class="project-num mono">02</span>
+<div class="project-links">
+<a href="https://github.com/anay1403/WMS" target="_blank" rel="noopener noreferrer" title="View GitHub Repo">⤻</a>
+</div>
+</div>
+<h3 class="project-title">Waste Management System</h3>
+<p class="project-desc">
+A responsive web-based platform to streamline waste collection workflows. Designed dual admin/user modules for real-time tracking, reporting, and management of waste disposal operations.
+</p>
+<div class="project-stack">
+<span class="stack-tag">PHP</span>
+<span class="stack-tag">MySQL</span>
+<span class="stack-tag">JavaScript</span>
+<span class="stack-tag">Bootstrap</span>
+</div>
+<div class="project-footer-links">
+<a href="https://github.com/anay1403/WMS" target="_blank" rel="noopener noreferrer" class="project-footer-link">View Repo ↗</a>
+</div>
+</div>
 
-        <div class="skill-card">
-          <div class="skill-card-icon">🌐</div>
-          <h3>Web & Frameworks</h3>
-          <div class="pill-group">
-            <span class="pill">Flask</span>
-            <span class="pill">Bootstrap</span>
-            <span class="pill">SQLite</span>
-            <span class="pill">MySQL</span>
-          </div>
-        </div>
+</div>
+</div>
+</section>
 
-        <div class="skill-card">
-          <div class="skill-card-icon">🤝</div>
-          <h3>Soft Skills</h3>
-          <div class="pill-group">
-            <span class="pill soft-pill">Leadership</span>
-            <span class="pill soft-pill">Mentorship</span>
-            <span class="pill soft-pill">Communication</span>
-            <span class="pill soft-pill">Problem Solving</span>
-          </div>
-        </div>
+<!-- ── CERTIFICATIONS ── -->
+<section id="certifications">
+<div class="container">
+<div class="section-eyebrow mono">04 — certifications</div>
+<h2 class="section-title">Verified Learning</h2>
+<div class="certs-list">
+<div class="cert-item">
+<div class="cert-badge elite">ELITE+GOLD</div>
+<div class="cert-info">
+<h4>Programming in Java</h4>
+<span class="cert-issuer">NPTEL</span>
+</div>
+<div class="cert-score">99%</div>
+</div>
+<div class="cert-item">
+<div class="cert-badge">CERTIFIED</div>
+<div class="cert-info">
+<h4>Python for Data Science</h4>
+<span class="cert-issuer">Saylor Academy</span>
+</div>
+</div>
+<div class="cert-item">
+<div class="cert-badge">CERTIFIED</div>
+<div class="cert-info">
+<h4>Pandas for Data Analysis in Python</h4>
+<span class="cert-issuer">Analytics Vidhya</span>
+</div>
+</div>
+<div class="cert-item">
+<div class="cert-badge">CERTIFIED</div>
+<div class="cert-info">
+<h4>Fundamentals of Data Structures in C</h4>
+<span class="cert-issuer">Simplilearn</span>
+</div>
+</div>
+<div class="cert-item">
+<div class="cert-badge">CERTIFIED</div>
+<div class="cert-info">
+<h4>Python for Beginners</h4>
+<span class="cert-issuer">Simplilearn</span>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-      </div>
-    </div>
-  </section>
+<!-- ── ACHIEVEMENTS ── -->
+<section id="achievements">
+<div class="container">
+<div class="section-eyebrow mono">05 — achievements</div>
+<h2 class="section-title">Highlights</h2>
+<div class="achievements-grid">
+<div class="achievement-card">
+<span class="ach-icon">🏆</span>
+<p>Rank <strong>#1</strong> in AI & ML Branch — B.Tech 2024–25, Dronacharya Group of Institutions</p>
+</div>
+<div class="achievement-card">
+<span class="ach-icon">🎖️</span>
+<p>Awarded by <strong>HFCL</strong> under "Tech To Learn and Lead" for teaching students during COVID-19</p>
+</div>
+<div class="achievement-card">
+<span class="ach-icon">📚</span>
+<p><strong>Subject Topper</strong> in Computer Science & Physics — Class XII (95.4%)</p>
+</div>
+<div class="achievement-card">
+<span class="ach-icon">🥇</span>
+<p><strong>State-Level 1st Place</strong> — Anuvrat Moral Song Singing, Uttar Pradesh</p>
+</div>
+<div class="achievement-card">
+<span class="ach-icon">🥈</span>
+<p><strong>National 2nd Place</strong> — Anuvrat Moral Song Singing, New Delhi (Junior Category)</p>
+</div>
+</div>
+</div>
+</section>
 
-  <!-- ── PROJECTS ── -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-eyebrow mono">03 — projects</div>
-      <h2 class="section-title">Things I've Built</h2>
-      <div class="projects-grid">
+<!-- ── CONTACT ── -->
+<section id="contact">
+<div class="container">
+<div class="section-eyebrow mono">06 — contact</div>
+<div class="contact-inner">
+<h2 class="section-title contact-title">Let's build<br /><span class="accent-text">something.</span></h2>
+<p class="contact-sub">Open to internships, collaborations, and interesting problems.</p>
+<div class="contact-links">
+<a href="mailto:ansib325@gmail.com" class="contact-card">
+<span class="contact-icon">✉</span>
+<div>
+<span class="contact-label mono">email</span>
+<span class="contact-val">ansib325@gmail.com</span>
+</div>
+</a>
+<a href="tel:+918920011033" class="contact-card">
+<span class="contact-icon">📞</span>
+<div>
+<span class="contact-label mono">phone</span>
+<span class="contact-val">+91 8920011033</span>
+</div>
+</a>
+<a href="https://linkedin.com/in/anay-srivastav" target="_blank" class="contact-card">
+<span class="contact-icon">💼</span>
+<div>
+<span class="contact-label mono">linkedin</span>
+<span class="contact-val">anay-srivastav</span>
+</div>
+</a>
+</div>
+<a href="resume.pdf" class="btn-primary btn-large" download>Download Résumé ↓</a>
+</div>
+</div>
+</section>
 
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-num mono">01</span>
-            <div class="project-links">
-              <a href="https://github.com/anay1403" target="_blank" title="GitHub">⤻</a>
-            </div>
-          </div>
-          <a href="https://smart-expense-tracker-fetv.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link">
-            <h3 class="project-title">Smart Expense Tracker</h3>
-          </a>
-        <p class="project-desc">
-        A full-stack Flask web application to track, categorize, and analyze personal expenses — complete with interactive data visualizations, PDF report generation, and CSV export for monthly summaries.
-        </p>
+<!-- ── FOOTER ── -->
+<footer>
+<div class="container footer-inner">
+<span class="mono footer-copy">© 2025 Anay Srivastav</span>
+<span class="mono footer-built">built with intention ✦</span>
+</div>
+</footer>
 
-
-          <div class="project-stack">
-            <span class="stack-tag">Python</span>
-            <span class="stack-tag">Flask</span>
-            <span class="stack-tag">SQLite</span>
-            <span class="stack-tag">Matplotlib</span>
-            <span class="stack-tag">HTML/CSS</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-num mono">02</span>
-            <div class="project-links">
-              <a href="https://github.com/anay1403" target="_blank" title="GitHub">⤻</a>
-            </div>
-          </div>
-          <h3 class="project-title">Waste Management System</h3>
-          <p class="project-desc">
-            A responsive web-based platform to streamline waste collection workflows. Designed dual admin/user modules for real-time tracking, reporting, and management of waste disposal operations.
-          </p>
-          <div class="project-stack">
-            <span class="stack-tag">PHP</span>
-            <span class="stack-tag">MySQL</span>
-            <span class="stack-tag">JavaScript</span>
-            <span class="stack-tag">Bootstrap</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CERTIFICATIONS ── -->
-  <section id="certifications">
-    <div class="container">
-      <div class="section-eyebrow mono">04 — certifications</div>
-      <h2 class="section-title">Verified Learning</h2>
-      <div class="certs-list">
-
-        <div class="cert-item">
-          <div class="cert-badge elite">ELITE+GOLD</div>
-          <div class="cert-info">
-            <h4>Programming in Java</h4>
-            <span class="cert-issuer">NPTEL</span>
-          </div>
-          <div class="cert-score">99%</div>
-        </div>
-
-        <div class="cert-item">
-          <div class="cert-badge">CERTIFIED</div>
-          <div class="cert-info">
-            <h4>Python for Data Science</h4>
-            <span class="cert-issuer">Saylor Academy</span>
-          </div>
-        </div>
-
-        <div class="cert-item">
-          <div class="cert-badge">CERTIFIED</div>
-          <div class="cert-info">
-            <h4>Pandas for Data Analysis in Python</h4>
-            <span class="cert-issuer">Analytics Vidhya</span>
-          </div>
-        </div>
-
-        <div class="cert-item">
-          <div class="cert-badge">CERTIFIED</div>
-          <div class="cert-info">
-            <h4>Fundamentals of Data Structures in C</h4>
-            <span class="cert-issuer">Simplilearn</span>
-          </div>
-        </div>
-
-        <div class="cert-item">
-          <div class="cert-badge">CERTIFIED</div>
-          <div class="cert-info">
-            <h4>Python for Beginners</h4>
-            <span class="cert-issuer">Simplilearn</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── ACHIEVEMENTS ── -->
-  <section id="achievements">
-    <div class="container">
-      <div class="section-eyebrow mono">05 — achievements</div>
-      <h2 class="section-title">Highlights</h2>
-      <div class="achievements-grid">
-        <div class="achievement-card">
-          <span class="ach-icon">🏆</span>
-          <p>Rank <strong>#1</strong> in AI & ML Branch — B.Tech 2024–25, Dronacharya Group of Institutions</p>
-        </div>
-        <div class="achievement-card">
-          <span class="ach-icon">🎖️</span>
-          <p>Awarded by <strong>HFCL</strong> under "Tech To Learn and Lead" for teaching students during COVID-19</p>
-        </div>
-        <div class="achievement-card">
-          <span class="ach-icon">📚</span>
-          <p><strong>Subject Topper</strong> in Computer Science & Physics — Class XII (95.4%)</p>
-        </div>
-        <div class="achievement-card">
-          <span class="ach-icon">🥇</span>
-          <p><strong>State-Level 1st Place</strong> — Anuvrat Moral Song Singing, Uttar Pradesh</p>
-        </div>
-        <div class="achievement-card">
-          <span class="ach-icon">🥈</span>
-          <p><strong>National 2nd Place</strong> — Anuvrat Moral Song Singing, New Delhi (Junior Category)</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CONTACT ── -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-eyebrow mono">06 — contact</div>
-      <div class="contact-inner">
-        <h2 class="section-title contact-title">Let's build<br /><span class="accent-text">something.</span></h2>
-        <p class="contact-sub">Open to internships, collaborations, and interesting problems.</p>
-        <div class="contact-links">
-          <a href="mailto:ansib325@gmail.com" class="contact-card">
-            <span class="contact-icon">✉</span>
-            <div>
-              <span class="contact-label mono">email</span>
-              <span class="contact-val">ansib325@gmail.com</span>
-            </div>
-          </a>
-          <a href="tel:+918920011033" class="contact-card">
-            <span class="contact-icon">📞</span>
-            <div>
-              <span class="contact-label mono">phone</span>
-              <span class="contact-val">+91 8920011033</span>
-            </div>
-          </a>
-          <a href="https://linkedin.com/in/anay-srivastav" target="_blank" class="contact-card">
-            <span class="contact-icon">💼</span>
-            <div>
-              <span class="contact-label mono">linkedin</span>
-              <span class="contact-val">anay-srivastav</span>
-            </div>
-          </a>
-        </div>
-        <a href="resume.pdf" class="btn-primary btn-large" download>Download Résumé ↓</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ── -->
-  <footer>
-    <div class="container footer-inner">
-      <span class="mono footer-copy">© 2025 Anay Srivastav</span>
-      <span class="mono footer-built">built with intention ✦</span>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

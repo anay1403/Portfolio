@@ -9,9 +9,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
-.project-footer-links{display:flex;gap:14px;margin-top:12px;}
-.project-footer-link{font-size:0.85rem;font-weight:500;color:var(--indigo,#6C63FF);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;}
+.project-footer-links{display:flex;gap:14px;margin-top:12px;position:relative;z-index:5;}
+.project-footer-link{font-size:0.85rem;font-weight:500;color:var(--indigo,#6C63FF);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;position:relative;z-index:5;pointer-events:auto;}
 .project-footer-link:hover{color:var(--cyan,#00F5FF);}
+.project-header,.project-header .project-links,.project-header .project-links a{position:relative;z-index:5;pointer-events:auto;}
+.project-title,.project-title a{position:relative;z-index:5;pointer-events:auto;}
 </style>
 </head>
 <body>
